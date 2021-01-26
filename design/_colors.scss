@@ -1,0 +1,95 @@
+/// @access private
+
+/// @link https://www.oddbird.net/accoutrement/docs/color.html
+$colors: (
+  ///
+  /// Colors
+  /// ==============
+  '-reflex-blue-highlight': #0f40f6,
+  '-reflex-blue': #092dc5,
+  '-white': #ffffff,
+  '-mist-gray': #f2f2f2,
+  '-fog-gray': #e9e9e9,
+  '-mid-1-gray': #c3c3c3,
+  '-mid-2-gray': #a4a3a4,
+  '-charcoal-gray': #ece9ec,
+  '-slate-gray': #3e3d3e,
+  '-slate': #d8d8d8,
+  '-cream' : #fbf4ed,
+  '-champagne' : #f9ece1,
+  '-black': #000000,
+  '-indigo' : #0b163b,
+  '-indigo-100':#03143B,
+  '-indigo-200':#0b153a,
+  '-navy-blue': #00156b,
+  '-rose' : #f8abab,
+  '-pink' : #FFEBF4,
+  '-blush' : #fcd7d6,
+  '-marigold' : #fad641,
+  '-marigold-light' :  #faf4ed,
+  '-tangerine' : #DA3522,
+  '-lake' : #c7eaf9,
+  '-emerald' : #3bab5c,
+  '-contrast-positive': #00aa42,
+  '-contrast-negative': #fa6e64,
+  '-editorial-blue': #60a4f3,
+  '-editorial-yellow': #fcb01b,
+  '-dark-cream' : #F9ECE1,
+);
+
+// Use color names that define the purpose of the color.
+// Example: primary or highlight or light-background
+$primary-colors: (
+  'primary': '#-reflex-blue',
+  'primary-100': '#-reflex-blue-highlight',
+  'primary-200': '#-navy-blue',
+  'primary-300': '#-indigo',
+  'primary-400': '#-indigo-100',
+  'primary-500': '#-indigo-200',
+);
+
+$secondary-colors: (
+  'secondary': '#-white',
+  'secondary-100': '#-mist-gray',
+  'secondary-200': '#-fog-gray',
+  'secondary-300': '#-mid-1-gray',
+  'secondary-400': '#-mid-2-gray',
+  'secondary-500': '#-charcoal-gray',
+  'secondary-600': '#-slate-gray',
+  'secondary-700': '#-slate',
+  'secondary-800': '#-black',
+);
+
+$text-colors: (
+  'text': '#primary-300',
+  'link': '#primary'
+);
+
+$button-colors: (
+  'button': '#primary',
+  'button-hover': '#primary-100',
+  'button-disable': '#secondary-400',
+  'button-secondary': transparent,
+  'button-secondary-hover': '#primary-100'
+);
+
+$other-colors: (
+  'cream-background': '#-cream',
+  'pink-background': '#-pink',
+  'champagne-background': '#-champagne',
+  'table-border': '#-champagne',
+  'marigold-light-background': '#-marigold-light',
+  'success': '#-contrast-positive',
+  'danger': '#-contrast-negative',
+  'info': '#-editorial-blue',
+  'warning': '#-editorial-yellow',
+  'dark-cream-background': '#-dark-cream',
+);
+
+@include add-colors(
+  $primary-colors,
+  $secondary-colors,
+  $text-colors,
+  $button-colors,
+  $other-colors
+)
