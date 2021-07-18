@@ -1,4 +1,4 @@
-# cssbird
+# CSS Bird
 
 ## Build Setup
 

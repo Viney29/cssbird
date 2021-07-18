@@ -1,50 +1,33 @@
 {
-  "name": "cssbird",
+  "name": "CssBird",
   "version": "1.0.0",
   "private": true,
+  "author": "Viney Bishnoi",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
-    "lint": "yarn lint:js && yarn lint:style"
-  },
-  "lint-staged": {
-    "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
+    "lint": "yarn lint:style"
   },
   "dependencies": {
-    "accoutrement": "^2.2.0",
-    "core-js": "^3.8.2",
-    "nuxt": "^2.14.12",
-    "sass": "^1.32.5",
-    "sass-loader": "^10.1.1"
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/pwa": "^3.3.5",
+    "accoutrement": "^3.0.1",
+    "core-js": "^3.9.1",
+    "node-sass": "^6.0.1",
+    "nuxt": "^2.15.3",
+    "sass": "~1.32.6",
+    "sass-loader": "10.1.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@nuxtjs/eslint-config": "^5.0.0",
-    "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/stylelint-module": "^4.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.18.0",
-    "eslint-config-prettier": "^7.1.0",
-    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.4.1",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
-    "stylelint": "^13.8.0",
+    "stylelint": "^13.12.0",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^21.0.0"
   }
 }

@@ -8,22 +8,14 @@
 // Configuration
 $can-use-css-variables: false !default;
 
+// Import all local fonts
+@include import-webfonts;
+
 // Basic Tokens
 @import 'colors';
 @import 'sizes';
-@import 'layouts';
-@import 'type';
-
-@import 'animation';
 @import 'typography';
-
-// Derived Tokens
-@import 'borders';
-@import 'radii';
-@import 'shadows';
+@import 'layouts';
+@import 'animation';
 @import 'z-index';
-
-// Helpers
-
-@import 'helper-css-variables';
-@import 'helper-css-mixin-position';
+@import 'helper-mixins';

@@ -1,3 +1,46 @@
+// **** Helper Mixins Collection  **** //
+
+
+/// Mixin for size of block ( width and height )
+@mixin blocksize($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// Quick Border
+// Usage definition (use `null` do not fill out)
+/// @example scss - scss
+///   .test {
+///    @include border(top, 1px, solid, color('primary'));
+///   }
+@mixin border($direction, $width, $style, $color) {
+  border-#{$direction}: $width $style $color;
+}
+
+// Quick Flexbox
+// Usage definition (use `null` do not fill out)
+/// @example scss - scss
+///   .test {
+///    @include flex(row, center, space-between, wrap);
+///   }
+@mixin flex($direction: null, $align-items: null, $justify-content: null, $flex-wrap: null) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin item($flex: null, $order: null) {
+  flex: $flex;
+  order: $order;
+}
+
+@mixin item($flex: null, $order: null) {
+  flex: $flex;
+  order: $order;
+}
+
 /// Shorthand mixin for offset positioning
 /// @param {String} $position - Either `relative`, `absolute` or `fixed`
 /// @param {Length} $top [null] - Top offset
@@ -10,19 +53,6 @@
   right: $right;
   bottom: $bottom;
   left: $left;
-}
-
-@mixin flex($direction: null, $align-items: null, $justify-content: null, $flex-wrap: null) {
-  display: flex;
-  flex-direction: $direction;
-  align-items: $align-items;
-  justify-content:$justify-content;
-  flex-wrap: $flex-wrap;
-}
-
-@mixin item($flex: null, $order: null){
-  flex: $flex;
-  order: $order;
 }
 
 /// Shorthand mixin for absolute positioning
@@ -61,11 +91,20 @@
 
 /// scale
 @mixin scale($scale) {
-	@include transform(scale($scale));
+  @include transform(scale($scale));
 }
 /// translate
 @mixin translate ($x, $y) {
   @include transform(translate($x, $y));
+}
+
+/// translate X-axis
+@mixin translateX ($x) {
+  @include transform(translateX($x));
+}
+/// translate Y-axis
+@mixin translateY ($y) {
+  @include transform(translateY($y));
 }
 /// skew
 @mixin skew ($x, $y) {
@@ -81,8 +120,8 @@
 /// @param {Arglist} $args - Offsets
 /// @require {mixin} position
 @mixin center {
-  @include position(absolute, 50%, null , null, null );
-  @include translate(0, -50%);
+  @include position(absolute, 50%, null , null, 50% );
+  @include translate(-50%, -50%);
 }
 
 /// Shorthand mixin for block center
@@ -102,4 +141,10 @@ $text: (
 
 @mixin text($token: 'left') {
   text-align: get-token($text, $token);
+}
+
+/// Mixin for size of block ( width and height )
+@mixin max-width($width) {
+  width: 100%;
+  max-width: $width;
 }

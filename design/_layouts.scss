@@ -1,22 +1,25 @@
 /// Media Breakpoints
 /// @link https://www.oddbird.net/accoutrement/docs/layout-queries.html#variable--breakpoints
 
-/// Map of breakpoints
-/// @type Map
+/// Breakpoint values, adjusted to the proper units
+/// @group config-layout
 $breakpoints: (
   'mobile': size('page'),
+  // 'mobile-medium': size('page-mobile-medium'),
   'mobile-large': size('page-mobile-large'),
   'tablet': size('page-tablet'),
   'tablet-large': size('page-tablet-large'),
+  'desktop-small': size('page-desktop-small'),
   'desktop': size('page-desktop'),
   'desktop-large': size('page-desktop-large'),
 );
 
+$breakpoints-with-all: map-merge(('all': 0), $breakpoints);
 /// Available Mixins
 /// @link:https://www.oddbird.net/accoutrement/docs/layout-queries.html#mixin--below
 
 /// @example
-/// @include below('mobile'){
+/// @include below('tablet'){
 ///   @content
 /// }
 /// @include above('tablet'){

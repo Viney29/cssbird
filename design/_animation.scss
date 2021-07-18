@@ -1,23 +1,50 @@
 /// @access private
 /// @link https://www.oddbird.net/accoutrement/docs/animate-times.html
 $times: (
-  'fast': 150ms,
-  'slow': 350ms,
+  'fast': 300ms,
+  'slow': 500ms
 );
 
 /// @access private
 /// @link https://www.oddbird.net/accoutrement/docs/animate-ease.html
 $easing: (
   'in': ease-in,
-  'out': ease-out,
+  'out': ease-out
 );
-
 
 /// @access private
 /// @link https://www.oddbird.net/accoutrement/docs/animate-change.html
 $changes: (
-  'fade': opacity time('slow') ease('out'),
-  'slide': transform time('fast'),
-  'background': background-color time('slow') ease('in'),
+  'fade': opacity time('fast') ease('out'),
+  'fade-hide': (
+    '#fade',
+    visibility time('fast') ease('out')
+  ),
+  'slide': transform time('fast')
 );
 
+
+
+// Animation Keyframes - Do Not Edit or Delete //
+
+@-webkit-keyframes grad { 0% { background-position: 0% 51% } 50% { background-position: 100% 50% } 100% { background-position: 0% 51% } }
+
+@-moz-keyframes grad { 0% { background-position: 0% 51% } 50% { background-position: 100% 50% } 100% { background-position: 0% 51% } }
+
+@keyframes grad { 0% { background-position: 0% 51% } 50% { background-position: 100% 50% } 100% { background-position: 0% 51% } }
+
+@-webkit-keyframes grad { 0% { background-position: 0% 49% } 50% { background-position: 100% 52% } 100% { background-position: 0% 49% } }
+
+@-moz-keyframes grad { 0% { background-position: 0% 49% } 50% { background-position: 100% 52% } 100% { background-position: 0% 49% } }
+
+@keyframes grad { 0% { background-position: 0% 49% } 50% { background-position: 100% 52% } 100% { background-position: 0% 49% } }
+
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
