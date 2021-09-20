@@ -1,13 +1,11 @@
 <template>
-  <div :class="$style.logo">
-    <nuxt-link to="/">
-      <!-- <img src="../assets/images/logo.png" alt="logo" /> -->
-    </nuxt-link>
-  </div>
+  <span :class="$style.logo">{ CssBird }</span>
 </template>
 
 <style lang="scss" module>
 .logo {
-  max-width: 125px;
+  color: color('highlight');
+  font-size: 24px;
+  text-decoration: none;
 }
 </style>

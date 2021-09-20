@@ -1,18 +1,20 @@
 <template>
-  <div :class="$style.header">
+  <header :class="$style.header">
     <logo :class="$style.logo" />
-    <div :class="$style.center">
-      <Navigation />
-    </div>
-    <div :class="$style.right">
-    </div>
-  </div>
+    <Navigation />
+  </header>
 </template>
 
 <style lang="scss" module>
 
 .header {
-  @include flex();
+  @include padding($left: 50px, $right: 50px);
+  @include flex($justify-content: space-between, $align-items: center);
+  @include blocksize(100%, 100px);
+
+  position: sticky;
+  top: 0;
+  z-index: 9;
 }
 
 .center {

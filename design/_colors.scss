@@ -27,6 +27,11 @@ $colors: (
   'danger': #dc3545,
   'light': #f8f9fa,
   'dark': #343a40,
+  'blue-zodiac': #0A192F,
+  'aquamarine': #64FFDA,
+  'bali-hai': #8892b0,
+  'cornflower-blue': #6195ED,
+  'moon-raker':  #CCD6F6,
 
   'sand': #f7f4ee,
 
@@ -44,9 +49,9 @@ $colors: (
 // Use color names that define the purpose of the color.
 // Example: primary or highlight or light-background
 $primary-colors: (
-  'primary': '#blue',
-  'primary-100': '#vivid-blue',
-  'primary-300': '#alice-blue',
+  'primary': '#bali-hai',
+  'primary-100': '#cornflower-blue',
+  'primary-200': '#moon-raker',
 );
 
 $secondary-colors: (
@@ -58,12 +63,15 @@ $secondary-colors: (
 );
 
 $text-colors: (
-  'text': '#dark-grey',
-  'highlight': '#neon',
-  'highlight-100': #9fff8f,
+  'text': '#primary',
+  'highlight': '#aquamarine',
   'link': '#vivid-blue',
   'link-hover': '#vivid-blue',
   'error': '#red',
+);
+
+$bg-colors:(
+  'primary-bg': '#blue-zodiac'
 );
 
 $button-colors: (
@@ -82,7 +90,8 @@ $button-colors: (
   $primary-colors,
   $secondary-colors,
   $text-colors,
-  $button-colors
+  $button-colors,
+  $bg-colors
 );
 
 // Example of usage
