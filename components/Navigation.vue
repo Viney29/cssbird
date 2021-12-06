@@ -44,6 +44,10 @@ export default {
 
 .nav {
   @include flex();
+
+  @include below('tablet-large'){
+    display: none;
+  }
 }
 
 .ol {

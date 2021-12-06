@@ -2,7 +2,7 @@
   <div :class="$style.block">
     <hero />
     <about />
-    <!-- <experience /> -->
+    <experience />
     <work />
     <projects />
     <contact />

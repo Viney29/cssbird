@@ -2,6 +2,7 @@
   <header :class="$style.header">
     <logo :class="$style.logo" />
     <Navigation />
+    <sideMenu />
   </header>
 </template>
 
@@ -14,7 +15,7 @@
 
   position: sticky;
   top: 0;
-  z-index: 9;
+  z-index: 11;
 }
 
 .center {
