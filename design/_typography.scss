@@ -1,28 +1,25 @@
 /// @access private
 /// @link https://www.oddbird.net/accoutrement/docs/type.html
 
+$font-path: '../assets/fonts/';
 /// Defined fonts
+
 $fonts: (
   'sans': (
-    'name': 'Lato',
-    'formats': 'woff2',
-    'stack': (
-      'Arial',
-      sans-serif,
-    ),
-    'normal':
-      'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap',
+    'name': 'Calibre-Regular',
+    'formats': 'woff2' 'woff',
+    'stack': ("Arial", sans-serif),
+    // Following are examples for loading fonts from S3.
+    // 'normal': 'https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap',
+    'normal': 'Calibre-Regular',
   ),
   'serif': (
-    'name': 'Montserrat',
+    'name': 'SFMono-Regular',
     'formats': 'woff2',
-    'stack': (
-      'Arial',
-      sans-serif,
-    ),
-    'normal':
-      'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap',
+    'stack': ("Arial",sans-serif),
+    'normal':'SFMono-Regular',
   ),
+
   'primary': '#sans',
   'secondary': '#serif',
 );
@@ -81,8 +78,8 @@ $typography: (
   ),
   'copy': (
     'font': '#primary',
-    'size': rem(14px),
-    'height': rem(24px),
+    'size': rem(20px),
+    'height': rem(26px),
     'weight': 400,
     'spacing': 0,
   ),
@@ -98,16 +95,16 @@ $typography: (
   'button':(
     'font': '#secondary',
     'size': rem(14px),
-    'height': rem(16px),
-    'weight': 600,
-    'spacing': 0.2px,
+    'height': rem(14px),
+    'weight': 400,
+    'spacing': 0,
   ),
   'select': '#button',
   'navigation': (
     'font': '#secondary',
-    'size': rem(12px),
-    'height': rem(16px),
-    'weight': 700,
+    'size': rem(13px),
+    'height': rem(17px),
+    'weight': 400,
     'spacing': 0.2px,
   ),
 
@@ -118,12 +115,11 @@ $typography: (
     'weight': 600,
     'spacing': 0.2px,
   ),
-  'small': (
+  'overline': (
     'font': '#secondary',
-    'size': rem(10px),
-    'height': rem(12px),
-    'weight': 600,
-    'spacing': 0.2px,
+    'size': rem(16px),
+    'height': rem(21px),
+    'weight': 400,
   ),
 );
 

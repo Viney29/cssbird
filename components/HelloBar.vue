@@ -7,7 +7,7 @@
 .bar {
   @include flex($align-items: center, $justify-content: center);
   @include blocksize(100%, 30px);
-  @include use-text-style('copy-small');
+  // @include use-text-style('copy-small');
 
   color: color('highlight');
   background-color: color('secondary-500');

@@ -1,21 +1,25 @@
 <template>
   <div>
-    <HelloBar/>
-    <!-- <Header /> -->
+    <!-- <HelloBar/> -->
+    <Header />
     <Nuxt />
+    <leftAlign />
+    <rightAlign />
     <Footer />
   </div>
 </template>
 
-<style>
+<style lang="scss" module>
+
+@include import-webfonts();
+
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  @include font-family('primary');
+
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
@@ -27,9 +31,15 @@ html {
   margin: 0;
 }
 
-
 body {
-  background-color:#ece93f;
+  background-color: color('primary-bg');
+  color: color('primary');
+
+  @include font-family('primary');
+}
+
+p {
+  @include margin(0,0,15px,0);
 }
 
 </style>
