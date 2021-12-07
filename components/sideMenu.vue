@@ -75,7 +75,7 @@ export default {
 }
 
 .menuIcon {
-  @include absolute($top: 42px, $right: 50px);
+  @include absolute($top: 31px, $right: 23px);
   @include blocksize(32px);
 
   z-index: 9999;
@@ -97,6 +97,10 @@ export default {
         transform: translateY(-12px) rotate(-45deg);
       }
     }
+  }
+
+  @include above('tablet-large'){
+    display: none;
   }
 }
 
