@@ -1,17 +1,24 @@
 <template>
-  <div :class="$style.sidebar">
-    <aside :class="$style.sidebarMenu">
-      <nav :class="$style.nav">
-        <ol :class="$style.ol">
-          <li v-for="menu in menuItem" :key="menu.title" :class="$style.li">
-            <nuxt-link :class="$style.link" :to="menu.url" >
-              {{ menu.title }}
-            </nuxt-link>
-          </li>
-        </ol>
-      <a :class="$style.resume" href='../assets/resume.pdf' download>resume</a>
-    </nav>
-    </aside>
+  <div>
+      <span @click="isActive" :class="[$style.menuIcon, {[$style.isOpen] : isOpen}]">
+      <span :class="$style.line"></span>
+      <span :class="$style.line"></span>
+      <span :class="$style.line"></span>
+    </span>
+    <div :class="[$style.sidebar, {[$style.isOpen] : isOpen}]">
+      <aside :class="$style.sidebarMenu">
+        <nav :class="$style.nav">
+          <ol :class="$style.ol">
+            <li v-for="menu in menuItem" :key="menu.title" :class="$style.li">
+              <nuxt-link :class="$style.link" :to="menu.url" >
+                {{ menu.title }}
+              </nuxt-link>
+            </li>
+          </ol>
+        <a :class="$style.resume" href='../assets/resume.pdf' download>resume</a>
+      </nav>
+      </aside>
+    </div>
   </div>
 </template>
 
@@ -40,11 +47,58 @@ export default {
       ]
     }
   },
+  methods:{
+    isActive: function() {
+      this.isOpen = !this.isOpen;
+    },
+  }
 }
 
 </script>
 
 <style lang="scss" module>
+
+.line {
+  display: block;
+
+  @include blocksize(100% , 2px);
+
+  background-color: color('primary');
+  transition:  all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+  &:nth-child(even){
+    @include margin($top:10px, $bottom: 10px);
+
+    width: 85%;
+    margin-left: 15%;
+  }
+}
+
+.menuIcon {
+  @include absolute($top: 42px, $right: 50px);
+  @include blocksize(32px);
+
+  z-index: 9999;
+  color: color('primary');;
+  display: block;
+  cursor: pointer;
+
+  &.isOpen {
+    overflow: hidden;
+
+    .line {
+      &:first-child {
+        transform: translateY(12px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:last-child {
+        transform: translateY(-12px) rotate(-45deg);
+      }
+    }
+  }
+}
 
 .sidebar {
   @include fixed(0,0,0);
@@ -52,13 +106,13 @@ export default {
 
   z-index: 10;
   outline: 0;
+  transform: translateX(100%);
+  visibility: hidden;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  transform: translateX(0);
-  visibility: visible;
 
-
-  @include above('tablet-large'){
-   display: none;
+  &.isOpen {
+    visibility: visible;
+    transform: translateX(0%);
   }
 }
 
@@ -90,6 +144,10 @@ export default {
   @include flex($direction: column, $align-items: center, $justify-content: space-between);
 
   list-style: none;
+
+  @include below('tablet-large'){
+     @include margin($bottom: 20px);
+  }
 }
 
 .li {
@@ -99,11 +157,27 @@ export default {
 
   counter-increment: item 1;
 
+  @include below('tablet-large'){
+    @include update-text-style('subtitle');
+  }
+
   &::before {
     content: "0" counter(item) ".";
     color: color('highlight');
 
     @include text('right');
+
+    @include below('tablet-large'){
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  @include below('tablet-large'){
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -122,7 +196,7 @@ export default {
 }
 
 .resume {
-  padding: 0.75rem 1rem;
+  @include padding(0.75rem, 1rem,0.75rem, 1rem );
   @include use-text-style('navigation');
 
   text-decoration: none;
@@ -131,6 +205,10 @@ export default {
   border: 1px solid color('highlight');
   color: color('highlight');
   text-transform: capitalize;
+
+  @include below('tablet-large'){
+    @include padding(0.75rem, 2rem,0.75rem, 2rem );
+  }
 }
 
 </style>
