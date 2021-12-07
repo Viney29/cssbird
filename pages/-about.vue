@@ -55,9 +55,19 @@ export default {
 <style lang="scss" module>
 
 .block {
-  @include padding($top:150px, $bottom: 150px);
+  @include padding($top:45px, $right: 20px, $bottom: 45px, $left: 20px);
   @include margin($left: auto, $right: auto);
-  @include max-width(1000px);
+
+  width: 100%;
+
+  @include above('tablet'){
+    @include padding($top:75px, $bottom: 75px);
+  }
+
+  @include above('tablet-large'){
+    @include padding(150px,0, 150px,0);
+    @include max-width(1000px);
+  }
 }
 
 .heading {
@@ -100,30 +110,47 @@ export default {
 }
 
 .row {
-  @include flex($justify-content: space-between, $align-items: center);
+  @include flex($direction: column, $justify-content: space-between, $align-items: center);
+
+  @include above('tablet-large'){
+    flex-direction: row;
+  }
 }
 
 .content {
   @include margin($top: 25px);
-
-  max-width: 480px;
-  width: 60%;
-
   @include use-text-style('copy');
+
+  width: 100%;
+
+  @include above('tablet'){
+    max-width: 480px;
+    width: 60%;
+  }
 }
 
 .media {
   @include relative();
-  @include margin($left: 60px);
+  @include margin($top: 50px);
 
-  width: 40%;
-  max-width: 300px;
+  width: 100%;
+
+  @include above('tablet'){
+    @include margin($top: 0, $left: 60px);
+
+    width: 40%;
+    max-width: 300px;
+  }
 }
 
 .user {
   @include flex();
-  @include blocksize(300px, 326px);
   @include relative();
+  @include blocksize(280px, 306px);
+
+  @include above('tablet'){
+    @include blocksize(300px, 326px);
+  }
 
   transition: transform .1s linear;
 
@@ -131,14 +158,19 @@ export default {
     content: "";
     display: block;
     position: absolute;
-    left: 20px;
-    top: 20px;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     border: 2px solid rgb(100, 255, 218);
     border-radius: 3px;
     z-index: -1;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+    @include above('tablet'){
+      left: 20px;
+      top:20px;
+    }
   }
 
 
@@ -150,12 +182,18 @@ export default {
     border-radius: 3px;
     transition: transform .1s linear;
     cursor: pointer;
+
+    @include below('tablet'){
+      transform: scale(.9);
+    }
   }
 
 
   &:hover img{
-    transform: scale(.9) translate(22px, 22px);
-    transition: transform .2s linear;
+    @include above('tablet'){
+      transform: scale(.9) translate(22px, 22px);
+      transition: transform .2s linear;
+    }
   }
 }
 

@@ -13,9 +13,19 @@
 <style lang="scss" module>
 
 .block {
-  @include padding($top:150px, $bottom: 150px);
+  @include padding($top:45px, $right: 20px, $bottom: 45px, $left: 20px);
   @include margin($left: auto, $right: auto);
-  @include max-width(1000px);
+
+  width: 100%;
+
+  @include above('tablet'){
+    @include padding($top:75px, $bottom: 75px);
+  }
+
+  @include above('tablet-large'){
+    @include padding(150px,0, 150px,0);
+    @include max-width(1000px);
+  }
 }
 
 .overline {
@@ -28,10 +38,18 @@
 .title {
   @include font-family('primary');
 
-  font-size: rem(80px);
+  font-size: rem(32px);
   line-height: 1.1;
   font-weight: 600;
   color: color('primary-200');
+
+  @include above('tablet'){
+    font-size: rem(60px);
+  }
+
+  @include above('tablet-large'){
+    font-size: rem(80px);
+  }
 }
 
 .updateColor {

@@ -2,58 +2,53 @@
   <div :class="$style.block" id="projects">
     <h2 :class="$style.heading">Some Things I've Built</h2>
     <div :class="$style.row">
-      <div :class="$style.item">
+      <div :class="[$style.item, $style.isReverse]">
         <div :class="$style.content">
           <h4 :class="$style.highlight">Featured Project</h4>
           <h5 :class="$style.name">
-             <a :class="$style.projectLink"  target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="#">Name</a>
+             <a :class="$style.projectLink"  target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="https://rothys.com/">Rothy's</a>
           </h5>
           <div :class="$style.copy">
-            <p>Register your in-app as a dealer and you can purchase roofing materials directly from CPE. Photo order, direct contact. Easy ordering when / where you want.</p>
+            <p> Rothy’s is a shoe company using recycled plastic water bottles to create stylish footwear — and improve our planet.</p>
           </div>
           <ul :class="$style.ul">
-            <li :class="$style.li">Vuejs</li>
+            <li :class="$style.li">PWA</li>
             <li :class="$style.li">Shopify</li>
             <li :class="$style.li">Optimizely</li>
             <li :class="$style.li">Vuejs</li>
           </ul>
-         <a :class="$style.projectLink" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="#"><span :class="$style.icon"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 194.818 194.818"><title>External</title><g><path d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728 c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04 C194.818,6.19,190.789,2.161,185.818,2.161z"></path><path d="M149,77.201c-4.971,0-9,4.029-9,9v88.456H18v-122h93.778c4.971,0,9-4.029,9-9s-4.029-9-9-9H9c-4.971,0-9,4.029-9,9v140 c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"></path></g></svg></span></a>
-         <span :class="$style.company">Made at <a :class="$style.projectLink" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="#">@Anatta</a></span>
+         <a :class="$style.projectLink" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="https://rothys.com/"><span :class="$style.icon"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 194.818 194.818"><title>External</title><g><path d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728 c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04 C194.818,6.19,190.789,2.161,185.818,2.161z"></path><path d="M149,77.201c-4.971,0-9,4.029-9,9v88.456H18v-122h93.778c4.971,0,9-4.029,9-9s-4.029-9-9-9H9c-4.971,0-9,4.029-9,9v140 c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"></path></g></svg></span></a>
+         <span :class="$style.company">Made at <a :class="$style.projectLink" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="https://anatta.io/case-study/rothys">@Anatta</a></span>
         </div>
-        <a :class="$style.link"  href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link">
-          <div :class="$style.media"><img :class="$style.image" src="../assets/images/project.png" /></div>
+        <a :class="$style.link"  href="https://rothys.com/" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link">
+          <div :class="$style.media"><img :class="$style.image" src="../assets/images/rothys.png" /></div>
+        </a>
+      </div>
+      <div :class="$style.item">
+        <div :class="$style.content">
+          <h4 :class="$style.highlight">Featured Project</h4>
+          <h5 :class="$style.name">
+             <a :class="$style.projectLink"  target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="https://mackweldon.com/">Mackweldon</a>
+          </h5>
+          <div :class="$style.copy">
+            <p>Mack Weldon is a clothing company that’s using premium fabrics and smart design to reinvent men’s basics.</p>
+          </div>
+          <ul :class="$style.ul">
+            <li :class="$style.li">Shopify</li>
+            <li :class="$style.li">Optimizely</li>
+            <li :class="$style.li">Vuejs</li>
+            <li :class="$style.li">web Vitals</li>
+          </ul>
+         <a :class="$style.projectLink" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="https://mackweldon.com/"><span :class="$style.icon"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 194.818 194.818"><title>External</title><g><path d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728 c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04 C194.818,6.19,190.789,2.161,185.818,2.161z"></path><path d="M149,77.201c-4.971,0-9,4.029-9,9v88.456H18v-122h93.778c4.971,0,9-4.029,9-9s-4.029-9-9-9H9c-4.971,0-9,4.029-9,9v140 c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"></path></g></svg></span></a>
+         <span :class="$style.company">Made at <a :class="$style.projectLink" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="https://anatta.io/case-study/mackweldon">@Anatta</a></span>
+        </div>
+        <a :class="$style.link"  href="https://mackweldon.com/" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link">
+          <div :class="$style.media"><img :class="$style.image" src="../assets/images/mw.png" /></div>
         </a>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data(){
-    return{
-      projects:[
-      {
-        name:'Anatta',
-        link: 'Sr UI Engineer',
-        content:'',
-        link:'#'
-      },
-      {
-        name:'WebForte',
-        position: 'Frontend Developer',
-        link:'#'
-      },
-      {
-        name:'Web Cronz',
-        position: 'UI Intern',
-        link:'#'
-      }
-    ]
-    }
-  }
-}
-</script>
 
 <style lang="scss" module>
 
@@ -103,7 +98,7 @@ export default {
 }
 
 .row {
-  @include flex($align-items: flex-start);
+  @include flex($direction: column, $align-items: flex-start);
   @include relative();
 }
 
@@ -162,7 +157,7 @@ export default {
 }
 
 .highlight {
-  @include margin($top: 10px);
+  @include margin($top: 10px, $bottom: 10px);
   @include font-family('secondary');
 
   font-size: 13px;
@@ -233,6 +228,22 @@ export default {
     width: 22px;
     height: 22px;
     fill: currentColor;
+  }
+}
+
+
+.isReverse {
+  .link {
+    grid-column: 1 / 8;
+  }
+
+  .ul {
+    justify-content: flex-end;
+  }
+
+  .content {
+    grid-column: 7 / -1;
+    text-align: right;
   }
 }
 </style>

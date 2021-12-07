@@ -14,6 +14,11 @@
   width: 40px;
   z-index: 10;
   color: rgb(168, 178, 209);
+  display: none;
+
+  @include above('tablet-large'){
+    display: block;
+  }
 }
 
 .wrapper {

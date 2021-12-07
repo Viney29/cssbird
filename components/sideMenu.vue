@@ -69,7 +69,7 @@ export default {
 
   @include blocksize(100% , 2px);
 
-  background-color: color('primary');
+  background-color: color('highlight');
   transition:  all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
   &:nth-child(even){
@@ -129,7 +129,7 @@ export default {
 .sidebarMenu {
   @include flex($direction: column, $align-items: center, $justify-content: center);
   @include padding($all: 50px);
-  @include blocksize(50vw, 100%);
+  @include blocksize(75vw, 100%);
   @include relative();
   @include font-family('secondary');
 
@@ -138,6 +138,10 @@ export default {
   right: 0;
   margin-left: auto;
   box-shadow: rgb(2 12 27 / 70%) -10px 0 30px -15px;
+
+  @include above('tablet'){
+    width: 50vw;
+  }
 }
 
 .nav {

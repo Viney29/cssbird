@@ -22,6 +22,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -34,6 +35,7 @@ html {
 body {
   background-color: color('primary-bg');
   color: color('primary');
+  overflow-x: hidden;
 
   @include font-family('primary');
 }
