@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="$style.mobileMenu">
       <span @click="isActive" :class="[$style.menuIcon, {[$style.isOpen] : isOpen}]">
       <span :class="$style.line"></span>
       <span :class="$style.line"></span>
@@ -57,6 +57,12 @@ export default {
 </script>
 
 <style lang="scss" module>
+
+.mobileMenu {
+  @include above('tablet-large'){
+    display: none;
+  }
+}
 
 .line {
   display: block;
