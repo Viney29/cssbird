@@ -12,6 +12,7 @@
       </div>
       <div :class="$style.media">
         <span :class="$style.user" >
+          <a href="https://opensea.io/assets/0x805a8c1b85152726cd85282f7222c529e459dbba/5811" target="_blank" :class="$style.buy">Buy This NFT</a>
           <img src="../assets/images/user.png"/>
         </span>
       </div>
@@ -156,6 +157,20 @@ export default {
     transform: scale(.9) translate(22px, 22px);
     transition: transform .2s linear;
   }
+}
+
+.buy {
+  @include absolute($left:0, $right:0, $bottom: 0);
+  @include flex($align-items: flex-end, $justify-content: center);
+  @include blocksize(100%);
+  @include use-text-style('subtitle');
+  @include text('center');
+
+
+  color: color('secondary');
+  text-decoration: none;
+  z-index: 2;
+
 }
 
 .ul {
