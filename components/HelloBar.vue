@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.bar"><span :class="$style.text">Website is Under construction. Cssbird is working tirelessly to finish it soon !! </span></div>
+  <div :class="$style.bar"><span :class="$style.text">This Website is in Beta. Cssbird is working tirelessly to finish it soon !! </span></div>
 </template>
 
 <style lang="scss" module>

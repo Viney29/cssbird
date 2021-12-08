@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <HelloBar/> -->
+    <HelloBar/>
     <Header />
     <Nuxt />
     <leftAlign />

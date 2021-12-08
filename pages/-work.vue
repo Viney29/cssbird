@@ -140,6 +140,7 @@
 }
 
 .media{
+  display: flex;
   width: 100%;
   max-width: 100%;
   vertical-align: middle;

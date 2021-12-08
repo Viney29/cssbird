@@ -3,13 +3,13 @@
     <h2 :class="$style.heading">Where I've Worked</h2>
     <div :class="$style.row">
       <ul role="tablist" aria-label="Job tabs" :class="$style.tabs">
-        <li :class="$style.li">
+        <li :class="[$style.li, $style.isActive]">
           <button id="tab-0" role="tab" aria-selected="false" aria-controls="panel-0" tabindex="-1" :class="$style.tabList">
             <span>Anatta</span>
           </button>
         </li>
         <li :class="$style.li">
-          <button id="tab-1" role="tab" aria-selected="false" aria-controls="panel-1" tabindex="-1" :class="$style.tablist">
+          <button id="tab-1" role="tab" aria-selected="false" aria-controls="panel-1" tabindex="-1" :class="$style.tabList">
             <span>WebForte Pvt Ltd.</span>
           </button>
         </li>
@@ -22,7 +22,7 @@
             <a :class="$style.link" href="http://anatta.io/" target="_blank" rel="nofollow noopener noreferrer">@ Anatta</a>
           </span>
           </h4>
-        <h5 :class="$style.time"><span>Jul 2018 - Jun 2019</span></h5>
+        <h5 :class="$style.time"><span>January 2018 - Current</span></h5>
         <div :class="$style.copy">
           <ul>
             <li>Interviewed 5+ prospective employees and mentored junior software developers on the team</li>
@@ -133,8 +133,10 @@ export default {
   @include relative();
   @include flex($align-items: center);
   @include blocksize(100%, 42px);
-  @include font-family('primary');
+  @include font-family('secondary');
 
+  border: none;
+  min-width: 180px;
   text-decoration: none;
   text-decoration-skip-ink: auto;
   cursor: pointer;
@@ -143,15 +145,32 @@ export default {
   text-align: left;
   white-space: nowrap;
   font-size: 13px;
-  color: rgb(100, 255, 218);
+  color: inherit;
+
+  &:hover {
+    background-color: rgb(23, 42, 69);
+  }
+}
+
+.highlight {
+  display: block;
+  background: rgb(100, 255, 218);
+  width: 2px;
+  height: 42px;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  z-index: 10;
+  transform: translateY(0);
 }
 
 .tabContent {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding-top: 12px;
-  padding-left: 30px;
+  @include relative();
+  @include blocksize(100%, auto);
+  @include padding($top: 12px, $left: 30px);
+  @include margin($top: 20px);
 }
 
 .title {
@@ -213,14 +232,20 @@ export default {
 
 .li {
   @include relative();
-  @include padding($left: 20px);
-  @include margin($bottom: 10px);
+  @include padding($left: 0);
+  @include margin($bottom: 0);
   @include font-family('secondary');
 
   font-size: 13px;
   line-height: 17px;
   color: color('primary');
   text-transform: capitalize;
+
+  &:hover,
+  &.isActive {
+     background-color: rgb(23, 42, 69);
+     color: rgb(100, 255, 218);
+  }
 
 }
 </style>
