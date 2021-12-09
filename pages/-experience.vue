@@ -14,7 +14,7 @@
           </button>
         </li>
         <li :class="$style.li">
-          <button id="tab-1" role="tab" aria-selected="false" aria-controls="panel-1" tabindex="-1" :class="$style.tabList">
+          <button id="tab-2" role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1" :class="$style.tabList">
             <span>WebCronz</span>
           </button>
         </li>
@@ -37,7 +37,7 @@
           </ul>
         </div>
       </div>
-      <div id="panel-0" role="tabpanel" aria-labelledby="tab-0" tabindex="-1" :class="$style.tabContent"  hidden>
+      <div id="panel-1" role="tabpanel" aria-labelledby="tab-1" tabindex="-1" :class="$style.tabContent"  hidden>
         <h4 :class="$style.title">
           <span>Sr UI Developer</span>
           <span :class="$style.company">
@@ -54,7 +54,7 @@
           </ul>
         </div>
       </div>
-      <div id="panel-0" role="tabpanel" aria-labelledby="tab-0" tabindex="-1" :class="$style.tabContent"  hidden></div>
+      <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" tabindex="-1" :class="$style.tabContent"  hidden></div>
     </div>
   </div>
 </template>
