@@ -3,7 +3,7 @@
     <h2 :class="$style.heading">About me</h2>
     <div :class="$style.row">
       <div :class="$style.content">
-        <p>Hello! I'm Viney, a UI engineer and Biker. Here's the link to my blog on medium. I love programming, writing, speaking and traveling.</p>
+        <p>Hello! I'm Viney, a UI engineer and Biker. I love programming, writing, speaking and traveling.</p>
         <p>As a UI engineer, I enjoy using my obsessive attention to detail, my unequivocal love for making things that change the world. That's why I like to make things that make a difference.</p>
         <p>Here are a few technologies I've been working with recently:</p>
         <ul :class="$style.ul">
