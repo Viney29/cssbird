@@ -46,6 +46,28 @@
           <div :class="$style.media"><img :class="$style.image" src="../assets/images/mw.png" /></div>
         </a>
       </div>
+      <div :class="[$style.item, $style.isReverse]">
+        <div :class="$style.content">
+          <h4 :class="$style.highlight">Featured Project</h4>
+          <h5 :class="$style.name">
+             <a :class="$style.projectLink"  target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="https://golubandcompany.com/">Golub</a>
+          </h5>
+          <div :class="$style.copy">
+            <p>Golub is a proven acquirer of a wide variety of commercial and multi-family property types, both as a trusted joint venture partner, and on our own.</p>
+          </div>
+          <ul :class="$style.ul">
+            <li :class="$style.li">Wordpress</li>
+            <li :class="$style.li">Vanila JS</li>
+            <li :class="$style.li">HTML</li>
+            <li :class="$style.li">CSS3</li>
+          </ul>
+         <a :class="$style.projectLink" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="https://golubandcompany.com/"><span :class="$style.icon"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 194.818 194.818"><title>External</title><g><path d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728 c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04 C194.818,6.19,190.789,2.161,185.818,2.161z"></path><path d="M149,77.201c-4.971,0-9,4.029-9,9v88.456H18v-122h93.778c4.971,0,9-4.029,9-9s-4.029-9-9-9H9c-4.971,0-9,4.029-9,9v140 c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"></path></g></svg></span></a>
+         <span :class="$style.company">Made at <a :class="$style.projectLink" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link" href="https://web-forte.com/">@WebForte Technologies</a></span>
+        </div>
+        <a :class="$style.link"  href="https://golubandcompany.com/" target="_blank" rel="nofollow noopener noreferrer" aria-label="External Link">
+          <div :class="$style.media"><img :class="$style.image" src="../assets/images/golub.png" /></div>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -53,9 +75,19 @@
 <style lang="scss" module>
 
 .block {
-  @include padding($top:150px, $bottom: 150px);
+  @include padding($top:45px, $right: 20px, $bottom: 45px, $left: 20px);
   @include margin($left: auto, $right: auto);
-  @include max-width(1000px);
+
+  width: 100%;
+
+  @include above('tablet'){
+    @include padding($top:75px, $bottom: 75px);
+  }
+
+  @include above('tablet-large'){
+    @include padding(150px,0, 150px,0);
+    @include max-width(1000px);
+  }
 }
 
 .heading {
@@ -103,12 +135,16 @@
 }
 
 .item {
-  @include margin($bottom: 100px);
+  @include margin($bottom: 200px);
 
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
+
+  @include below('tablet'){
+    @include margin($bottom: 100px);
+  }
 }
 
 .content {
@@ -116,6 +152,11 @@
 
   grid-area: 1 / 1 / -1 / 7;
   z-index: 2;
+
+  @include below('tablet'){
+    grid-column: 1 / -1;
+    padding: 40px 40px 30px;
+  }
 }
 
 .projectLink {
@@ -137,6 +178,11 @@
   background-color: rgb(100, 255, 218);
   border-radius: 4px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+  @include below('tablet'){
+    grid-column: 1 / -1;
+    opacity: 0.25;
+  }
 }
 
 .media{
@@ -154,6 +200,10 @@
 
   img {
     @include blocksize(100%);
+  }
+
+  @include below('tablet'){
+    min-height: 400px;
   }
 }
 
@@ -226,16 +276,21 @@
 .icon {
 
   svg {
-    width: 22px;
-    height: 22px;
+    width: 14px;
+    height: 14px;
     fill: currentColor;
   }
 }
 
 
 .isReverse {
+
   .link {
     grid-column: 1 / 8;
+
+    @include below('tablet'){
+      grid-column: 1 / -1;
+    }
   }
 
   .ul {
@@ -245,6 +300,10 @@
   .content {
     grid-column: 7 / -1;
     text-align: right;
+
+    @include below('tablet'){
+      grid-column: 1 / -1;
+    }
   }
 }
 </style>

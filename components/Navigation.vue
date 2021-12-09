@@ -2,9 +2,9 @@
   <nav role="navigation" aria-label="main navigation" :class="$style.nav">
     <ol :class="$style.ol">
       <li v-for="menu in menuItem" :key="menu.title" :class="$style.li">
-        <nuxt-link :class="$style.link" :to="menu.url" >
+        <a :class="$style.link" :href="menu.url" >
           {{ menu.title }}
-        </nuxt-link>
+        </a>
       </li>
     </ol>
     <a :class="$style.resume" href='../assets/resume.pdf' download>resume</a>

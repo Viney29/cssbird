@@ -13,6 +13,11 @@
             <span>WebForte Pvt Ltd.</span>
           </button>
         </li>
+        <li :class="$style.li">
+          <button id="tab-1" role="tab" aria-selected="false" aria-controls="panel-1" tabindex="-1" :class="$style.tabList">
+            <span>WebCronz</span>
+          </button>
+        </li>
         <span :class="$style.highlight"></span>
       </ul>
       <div id="panel-0" role="tabpanel" aria-labelledby="tab-0" tabindex="-1" :class="$style.tabContent" >
@@ -22,7 +27,24 @@
             <a :class="$style.link" href="http://anatta.io/" target="_blank" rel="nofollow noopener noreferrer">@ Anatta</a>
           </span>
           </h4>
-        <h5 :class="$style.time"><span>January 2018 - Current</span></h5>
+        <h5 :class="$style.time"><span>January 2018 - Till Date</span></h5>
+        <div :class="$style.copy">
+          <ul>
+            <li>Interviewed 5+ prospective employees and mentored junior software developers on the team</li>
+            <li>Created and launched CPE mobile on React Native(Typescript). The app for the sale of building materials in the Netherlands. Then I helped the company get a new big project worth €1 Million</li>
+            <li>Created and launched Dakota Calc App on React Native(Typescript). The app is used for calculation roof repair on Netherland</li>
+            <li>Developed Brockmeyer Portal on React and Nodejs. This web app is a portal for looking for employees in Europe</li>
+          </ul>
+        </div>
+      </div>
+      <div id="panel-0" role="tabpanel" aria-labelledby="tab-0" tabindex="-1" :class="$style.tabContent"  hidden>
+        <h4 :class="$style.title">
+          <span>Sr UI Developer</span>
+          <span :class="$style.company">
+            <a :class="$style.link" href="http://anatta.io/" target="_blank" rel="nofollow noopener noreferrer">@ Anatta</a>
+          </span>
+        </h4>
+        <h5 :class="$style.time"><span>August 2015 - December 2017</span></h5>
         <div :class="$style.copy">
           <ul>
             <li>Interviewed 5+ prospective employees and mentored junior software developers on the team</li>
@@ -66,9 +88,19 @@ export default {
 <style lang="scss" module>
 
 .block {
-  @include padding($top:150px, $bottom: 150px);
+  @include padding($top:45px, $right: 20px, $bottom: 45px, $left: 20px);
   @include margin($left: auto, $right: auto);
-  @include max-width(700px);
+
+  width: 100%;
+
+  @include above('tablet'){
+    @include padding($top:75px, $bottom: 75px);
+    @include max-width(700px);
+  }
+
+  @include above('tablet-large'){
+    @include padding(150px,0, 150px,0);
+  }
 }
 
 .heading {
@@ -111,8 +143,12 @@ export default {
 }
 
 .row {
-  @include flex($align-items: flex-start);
+  @include flex($direction: column, $align-items: flex-start);
   @include relative();
+
+  @include above('tablet'){
+    flex-direction: row;
+  }
 }
 
 
@@ -125,6 +161,11 @@ export default {
 
   @include padding($all: 0);
   @include margin(20px, 0, 0, 0);
+
+  @include below('tablet'){
+    width: 100%;
+    display: flex;
+  }
 
 }
 
@@ -150,6 +191,12 @@ export default {
   &:hover {
     background-color: rgb(23, 42, 69);
   }
+
+  @include below('tablet'){
+    width: 33%;
+    border-left: none;
+    border-bottom: 2px solid rgb(51, 63, 88);
+  }
 }
 
 .highlight {
@@ -164,6 +211,15 @@ export default {
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
   z-index: 10;
   transform: translateY(0);
+
+  @include below('tablet'){
+    width: 100%;
+    max-width: 33%;
+    height: 2px;
+    top: auto;
+    bottom: 0;
+    transform: translateX(0);
+  }
 }
 
 .tabContent {

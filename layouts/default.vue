@@ -36,6 +36,7 @@ body {
   background-color: color('primary-bg');
   color: color('primary');
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
   @include font-family('primary');
 }
