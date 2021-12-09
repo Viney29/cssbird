@@ -116,6 +116,10 @@ export default {
   color: color('primary-200');
   text-transform: capitalize;
 
+  @include below('tablet'){
+    font-size: 24px;
+  }
+
   &::before {
     counter-increment: section 1;
     content: "0" counter(section) ".";
@@ -193,6 +197,7 @@ export default {
   }
 
   @include below('tablet'){
+    min-width: fit-content;
     width: 33%;
     border-left: none;
     border-bottom: 2px solid rgb(51, 63, 88);
@@ -227,6 +232,10 @@ export default {
   @include blocksize(100%, auto);
   @include padding($top: 12px, $left: 30px);
   @include margin($top: 20px);
+
+  @include below('tablet'){
+    @include padding( $left: 5px);
+  }
 }
 
 .title {

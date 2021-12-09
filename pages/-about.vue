@@ -83,6 +83,10 @@ export default {
   color: color('primary-200');
   text-transform: capitalize;
 
+  @include below('tablet'){
+    font-size: 24px;
+  }
+
   &::before {
     counter-increment: section 1;
     content: "0" counter(section) ".";

@@ -103,6 +103,10 @@
   color: color('primary-200');
   text-transform: capitalize;
 
+  @include below('tablet'){
+    font-size: 24px;
+  }
+
   &::before {
     counter-increment: section 1;
     content: "0" counter(section) ".";
@@ -155,7 +159,7 @@
 
   @include below('tablet'){
     grid-column: 1 / -1;
-    padding: 40px 40px 30px;
+    padding: 20px 20px 20px;
   }
 }
 
@@ -165,6 +169,10 @@
 
   &:hover {
     color: color('highlight');
+  }
+
+  @include below('tablet'){
+    color: #a8b2d1;
   }
 }
 
@@ -249,6 +257,12 @@
   p {
     @include margin($bottom: 0);
   }
+
+  @include below('tablet'){
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 .ul {
@@ -271,6 +285,10 @@
   color: color('primary');
   text-transform: capitalize;
   white-space: nowrap;
+
+  @include below('tablet'){
+    color: #a8b2d1;
+  }
 }
 
 .icon {

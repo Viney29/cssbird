@@ -19,19 +19,19 @@ export default {
       menuItem:[
         {
           title:'About',
-          url: '#about'
+          url: '/#about'
         },
         {
           title:'Experience',
-          url: '#jobs'
+          url: '/#jobs'
         },
         {
           title:'Work',
-          url: '#projects'
+          url: '/#projects'
         },
         {
           title:'Contact',
-          url: '#contact'
+          url: '/#contact'
         },
       ]
     }

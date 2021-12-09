@@ -81,11 +81,22 @@ export default {
 <style lang="scss" module>
 
 .block {
-  @include padding($top:150px, $bottom: 150px);
+  @include padding($top:45px, $right: 20px, $bottom: 45px, $left: 20px);
   @include margin($left: auto, $right: auto);
-  @include max-width(1000px);
   @include flex($direction: column, $align-items: flex-start, $justify-content: center);
+
+  width: 100%;
+
+  @include above('tablet'){
+    @include padding($top:75px, $bottom: 75px);
+  }
+
+  @include above('tablet-large'){
+    @include padding(150px,0, 150px,0);
+    @include max-width(1000px);
+  }
 }
+
 
 .heading {
   @include margin(0, auto,0, auto);
@@ -95,6 +106,10 @@ export default {
   line-height: 42px;
   color: color('primary-200');
   text-transform: capitalize;
+
+  @include below('tablet'){
+    font-size: 24px;
+  }
 }
 
 .link {
@@ -135,6 +150,10 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 15px;
+
+  @include below('tablet'){
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 
 .item {
@@ -152,8 +171,10 @@ export default {
 
   &:focus,
   &:hover {
-    box-shadow: rgb(2 12 27 / 70%) 0 20px 30px -15px;
-    transform: translateY(-5px);
+    @include above('tablet'){
+      box-shadow: rgb(2 12 27 / 70%) 0 20px 30px -15px;
+      transform: translateY(-5px);
+    }
   }
 }
 

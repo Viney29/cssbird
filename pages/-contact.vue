@@ -36,11 +36,20 @@ export default {
 <style lang="scss" module>
 
 .block {
-  @include padding($top:150px, $bottom: 150px);
+  @include padding($top:45px, $right: 20px, $bottom: 45px, $left: 20px);
   @include margin($left: auto, $right: auto);
-  @include max-width(600px);
+  @include text('center');
 
-  text-align: center;
+  width: 100%;
+
+  @include above('tablet'){
+    @include padding($top:75px, $bottom: 75px);
+    @include max-width(600px);
+  }
+
+  @include above('tablet-large'){
+    @include padding(150px,0, 150px,0);
+  }
 }
 
 .highlight {
@@ -71,14 +80,26 @@ export default {
 
 .heading {
   margin: 0 0 20px;
-  font-size: 60px;
+  font-size: 32px;
   color: color('primary-200');
   text-transform: capitalize;
+
+  @include above('tablet'){
+    font-size: 42px;
+  }
+
+  @include above('tablet-large'){
+     font-size: 60px;
+  }
 }
 
 
 .content {
   @include use-text-style('copy');
+
+  @include below('tablet'){
+    font-size: 18px;
+  }
 }
 
 .link {
@@ -99,6 +120,10 @@ export default {
 
   &:hover {
     background-color: rgba(100, 255, 218, 0.07);
+  }
+
+  @include below('tablet'){
+    margin-top: 30px;
   }
 }
 </style>
