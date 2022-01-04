@@ -1,11 +1,6 @@
 <template>
-  <div>
-    <!-- <HelloBar/> -->
-    <Header />
-    <Nuxt />
-    <leftAlign />
-    <rightAlign />
-    <Footer />
+  <div :class="$style.error">
+    <h1>404 Page</h1>
   </div>
 </template>
 
@@ -43,6 +38,15 @@ body {
 
 p {
   @include margin(0,0,15px,0);
+}
+
+.error {
+  min-height: calc(100vh - 131px);
+  @include flex($align-items: center, $justify-content: center);
+
+  @include above('tablet'){
+    min-height: calc(100vh - 90px);
+  }
 }
 
 </style>

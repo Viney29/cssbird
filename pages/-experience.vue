@@ -30,10 +30,13 @@
         <h5 :class="$style.time"><span>January 2018 - Till Date</span></h5>
         <div :class="$style.copy">
           <ul>
-            <li>Interviewed 5+ prospective employees and mentored junior software developers on the team</li>
-            <li>Created and launched CPE mobile on React Native(Typescript). The app for the sale of building materials in the Netherlands. Then I helped the company get a new big project worth €1 Million</li>
-            <li>Created and launched Dakota Calc App on React Native(Typescript). The app is used for calculation roof repair on Netherland</li>
-            <li>Developed Brockmeyer Portal on React and Nodejs. This web app is a portal for looking for employees in Europe</li>
+            <li>Interviewed 10+ prospective employees and mentored junior UI developers on the team</li>
+            <li>Optimized web performance by improving  Web Vitals.</li>
+            <li>Developed multiple Single page applications using Vuejs.</li>
+            <li>Developing and updating PLPs and PDPs to improve user experience and increase conversion and AOV across multiple brand websites whilst maintaining best practices (A/B testing).</li>
+            <li>Rebranded multiple e-commerce websites which increases the number of leads.</li>
+            <li>Developed PWA in Vue Js using shopify storefront API.</li>
+            <li>Developed UI kit containing generic components to be used across the company.</li>
           </ul>
         </div>
       </div>
@@ -47,10 +50,12 @@
         <h5 :class="$style.time"><span>August 2015 - December 2017</span></h5>
         <div :class="$style.copy">
           <ul>
-            <li>Interviewed 5+ prospective employees and mentored junior software developers on the team</li>
-            <li>Created and launched CPE mobile on React Native(Typescript). The app for the sale of building materials in the Netherlands. Then I helped the company get a new big project worth €1 Million</li>
-            <li>Created and launched Dakota Calc App on React Native(Typescript). The app is used for calculation roof repair on Netherland</li>
-            <li>Developed Brockmeyer Portal on React and Nodejs. This web app is a portal for looking for employees in Europe</li>
+            <li>Development of Clean Code - Optimized for performance, search engines and cross browsers compatibility.</li>
+            <li>Improved website speed by optimizing images, reducing render blocking and eliminating dependency on external CSS libraries by designing custom stylesheets.</li>
+            <li>Converted Sketch files  to responsive web pages using HTML5, CSS3 and JS.</li>
+            <li>Developed custom HTML5 email templates for clients marketing campaigns.</li>
+            <li>Developed pixel perfect responsive wordpress websites from scratch.</li>
+            <li>Collaborated with a team of designers and developers to deploy and maintain over 50 WordPress sites.</li>
           </ul>
         </div>
       </div>

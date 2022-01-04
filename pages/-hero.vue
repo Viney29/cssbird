@@ -13,17 +13,17 @@
 <style lang="scss" module>
 
 .block {
-  @include padding($top:45px, $right: 20px, $bottom: 45px, $left: 20px);
+  @include padding($top:150px, $right: 20px, $bottom: 45px, $left: 20px);
   @include margin($left: auto, $right: auto);
 
   width: 100%;
 
   @include above('tablet'){
-    @include padding($top:75px, $bottom: 75px);
+    @include padding($top:150px, $bottom: 75px);
   }
 
   @include above('tablet-large'){
-    @include padding(150px,0, 150px,0);
+    @include padding(200px,0, 150px,0);
     @include max-width(1000px);
   }
 }
